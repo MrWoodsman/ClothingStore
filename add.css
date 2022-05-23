@@ -1,0 +1,182 @@
+#AddProduct {
+    margin: 0 15px;
+    position: relative;
+    max-width: 750px;
+}
+
+/* .center {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+} */
+.comment {
+    color: gray;
+}
+.error {
+    color: red !important;
+}
+.need::before {
+    content: '*';
+    font-weight: bold;
+}
+
+
+label {
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+input.styled {
+    width: calc(100% - 30px);
+    padding: 5px 15px;
+    font-family: 'PT Sans', sans-serif;
+    height: 25px;
+    border: none;
+    background: var(--bgcolor);
+    position: relative;
+    border-bottom: 2px gray solid;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    transition: 300ms border-bottom;
+}
+input.styled:focus {
+    outline: none;
+    border-bottom: 2px rgb(0, 211, 148) solid;
+}
+textarea {
+    width: calc(100% - 30px);
+    padding: 15px 15px;
+    font-family: 'PT Sans', sans-serif;
+    height: 150px;
+    border: none;
+    background: var(--bgcolor);
+    position: relative;
+    border-bottom: 2px gray solid;
+    resize: none;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    transition: 300ms border-bottom;
+}
+textarea:focus {
+    outline: none;
+    border-bottom: 2px rgb(0, 211, 148) solid;
+}
+
+#sizetest {
+    display: inline;
+}
+.ClearBtn {
+    float: right;
+    padding: 5px 10px;
+    background: var(--bgcolor);
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 200ms background;
+}
+.ClearBtn:hover {
+    background: var(--bgcolorhover);
+}
+
+#ProductSize {
+    width: 100%;
+    /* min-height: 35px; */
+    padding-bottom: 25px;
+    /* background: red; */
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#ProductSize span {
+    font-family: 'PT Sans', sans-serif;
+    /* transition: 1s; */
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background: var(--bgcolor);
+}
+#ProductSize span::after {
+    content: '✖';
+    padding-left: 5px;
+    font-weight: bold;
+}
+.ToRemove {
+    animation: Remove .2s forwards;
+}
+@keyframes Remove {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+
+.info {
+    font-weight: normal;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#ImgGrid {
+    margin: 0;
+    width: calc(100% - 20px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /* grid-template-rows: repeat(auto-fill, 90px); */
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    padding: 15px 10px 15px 10px;
+    font-family: 'PT Sans', sans-serif;
+}
+.testimg {
+    background: var(--bgcolor);
+    aspect-ratio: 1/1;
+}
+.DisplayImg {
+    background: var(--bgcolor);
+    aspect-ratio: 1/1;
+    background-image: url('https://helpx.adobe.com/content/dam/help/en/photoshop/how-to/compositing/jcr%3Acontent/main-pars/image/compositing_1408x792.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+#dispalyer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+#dispalyer .exit {
+    color: white;
+    padding-left: 10px;
+    font-size: clamp(15px,5vw,50px);
+    float: right;
+    position: absolute;
+    cursor: pointer;
+}
+#dispalyer .cent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ViewImg {
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 10px 4px;
+    width: 80%;
+}
+.hide {
+    display: none !important;
+}
+
+#display-image{
+    width: 400px;
+    height: 225px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+  }

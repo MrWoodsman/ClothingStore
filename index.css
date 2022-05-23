@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav#MainNav {
+    width: 100%;
+    height: 100%;
+    border-bottom: var(--NavSettings);
+}
+nav#MainNav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+nav#MainNav li {
+    float: left;
+    transition: 200ms background;
+}
+nav#MainNav li:hover:not(.disable) {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+nav#MainNav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#ProductList {
+    background: var(--ProductList);
+    width: calc(100% - 20px);
+    /* height: 100vh; */
+    /*  */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* grid-template-rows: repeat(auto-fill, 90px); */
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding: 0px 10px 10px 10px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.ProductCard {
+    text-decoration: none;
+    position: relative;
+    background: var(--CardBg);
+    /* aspect-ratio: var(--CardAspect); */
+}
+.ProductCard .ProductUser {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 5px 5px;
+    width: calc(100% - 15px);
+    aspect-ratio: var(--CardUserAspect);
+}
+.ProductCard .ProductUser img {
+    height: 100%;
+    border-radius: 50%;
+}
+.ProductCard .ProductUser h4 {
+    color: var(--ProductInfoOtherColor);
+    margin: 0;
+    padding: 0 0 0 5px;
+    font-size: clamp(10px, 100%, 13px);
+}
+.ProductCard .ProductImg {
+    width: 100%;
+    aspect-ratio: var(--CardImgAspect);
+    background: gainsboro;
+    background-image: url('https://images1.vinted.net/t/01_004d8_bwZLpVgr31J4ssQxhpDg93qG/310x430/1653255639.jpeg?s=1d7e307eb8f3d87f5e3990b001ed5f38728ff1bb');
+    background-size: cover;
+    background-position: center;
+}
+.ProductCard .ProductInfo {
+    font-size: clamp(13px,75%,15px);
+    padding: 5px 10px;
+}
+.ProductCard .ProductInfo p {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.ProductPrice {
+    color: var(--ProductInfoPriceColor);
+}
+.ProductPrice::after {
+    content: ' zł';
+}
+.ProductSize {
+    color: var(--ProductInfoOtherColor);
+}
+.ProductStyle {
+    color: var(--ProductInfoOtherColor);
+}
+#NEW {
+    font-family: 'PT Sans', sans-serif;
+    padding: 10px 10px 10px 15px;
+    margin: 0px;
+}

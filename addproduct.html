@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="add.css">
+    <link rel="stylesheet" href="root.css">
+    <title>Name | Tworzenie ogłoszenia</title>
+</head>
+<body>
+    <div id="dispalyer"  onclick="ExitImg()" class="hide" >
+        <div class="exit" onclick="ExitImg()">✖</div>
+        <div class="cent">
+            <img id="ViewImg" src="" alt="">
+        </div>
+        <!-- <div id="ViewImg"></div> -->
+    </div>
+    <nav id="MainNav">
+        <ul>
+            <li class="disable"><a href="index.html" style="cursor: default;">LOGO</a></li>
+            <li style="float: right;"><a href="">Dodaj</a></li>
+        </ul>
+    </nav>
+    <div class="center">
+        <h3 id="NEW">Tworzenie ogłoszenia</h3>
+    <div id="AddProduct">
+        <!-- NAZWA -->
+        <label class="need" for="fname" id="fnametxt">Nazwa Produktu:</label><br>
+        <input class="styled" id="fname" name="fname" type="text" autocomplete="off">
+        <!-- OPIS -->
+        <label class="need" for="fdescription" id="fdescriptiontxt">Opis:</label><br>
+        <textarea id="fdescription" wrap="soft" spellcheck="false" name="fdescription"></textarea>
+        <!-- ROZMARY / TAGI -->
+        <div id="sizetest">
+            <label class="need" for="fname" id="ProductSizetxt">Rozmiar: <span class="comment">(kliknij ENTER aby dodać) (MAX 4)</span></label>
+            <label class="ClearBtn" onclick="Clear()">Wyczyść</label>
+        </div>
+        <input class="styled" style="margin-bottom: 0px;" maxlength="11" id="fsize" name="fname" type="text" autocomplete="off">
+        <div id="ProductSize" class="noselect"></div>
+        <!-- MARKA -->
+        <label class="" for="fmarka" id="fmarkatxt">Marka:</label><br>
+        <input class="styled" id="fmarka" list="marks" name="fmarka" type="text" autocomplete="off">
+        <!-- ZDJECIA -->
+        <label class="need" for="fmarka">Zdjęcia:</label>
+        <input type="file" id="ImgUpload" name="img" accept="image/*">
+        <div id="ImgGrid"></div>
+        <!-- INFO -->
+        <h3 class="info">* - Pola wymagane </h3>
+    </div>
+    </div>
+    <datalist id="marks">
+
+        <option value="H&M">
+        <option value="Crop">
+        <option value="House">
+        <option value="Bershka">
+        <option value="Vintage">
+        <option value="Zara">
+        <option value="Sinsay">
+        <option value="Bez marki">
+
+      </datalist>
+</body>
+    <script src="add.js"></script>
+    <script src="firebase.js" type="module"></script>
+    <!-- <script src="jquery-3.5.1.js"></script> -->
+</html>

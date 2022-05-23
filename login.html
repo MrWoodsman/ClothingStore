@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="root.css">
+    <title>Name | Logowanie</title>
+</head>
+<body>
+    <nav id="MainNav">
+        <h3 class="font">Login or register</h3>
+    </nav>
+    <div id="main">
+        <input id="EmailIn" type="email" placeholder="Email">
+        <input id="PasswordIn" type="password" placeholder="Password">
+        <button id="UserRegister">Register</button>
+    </div>
+</body>
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js"></script> -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
+
+        const firebaseConfig = {
+        apiKey: "AIzaSyDVYyPjdGQWCGRxfdj1yv9p8E5bX6i0cjo",
+        authDomain: "clothingstore-f186f.firebaseapp.com",
+        projectId: "clothingstore-f186f",
+        storageBucket: "clothingstore-f186f.appspot.com",
+        messagingSenderId: "555893067796",
+        appId: "1:555893067796:web:f66e8b1ef383bed8a71701",
+        measurementId: "G-Z5H2MZ098E"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const analytics = getAnalytics(app);
+
+    </script>
+    <script src="auth.js" type="module"></script>
+</html>
